@@ -3,13 +3,33 @@ import { galleryItems } from "./gallery-items.js";
 
 console.log(galleryItems);
 
-// Создаём массив для разметки
-
-const galleryMarkup = [];
-
 // Контейнер галлереи
 
 const galleryContainer = document.querySelector(".gallery");
+
+// // Через .map() --- сделаю этим методом 2-ю таску.
+
+// const galleryMarkup = galleryItems
+//   .map(
+//     ({ preview: previewImg, original: originalImg, description: alt }) =>
+//       `
+//       <div class="gallery__item">
+//           <a class="gallery__link" href="${originalImg}">
+//               <img class="gallery__image"
+//                     src="${previewImg}"
+//                     data-source="${originalImg}"
+//                     alt="${alt}"/>
+//             </a>
+//       </div>
+//             `
+//   )
+//   .join("");
+
+// galleryContainer.innerHTML = galleryMarkup;
+
+// Создаём массив для разметки
+
+const galleryMarkup = [];
 
 // Создаём каточки
 
